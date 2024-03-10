@@ -7,14 +7,25 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      navy: "#14213d",
+      crimson: "#dc143c",
+      yellow: "#fca311",
+      gray: "#e5e5e5",
+      white: "#fff",
+      black: "#181818",
+      clear: "transparent",
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        azeret_mono: ['"azeret_mono"', "monospace"],
+        azeret_mono_italic: ['"azeret_mono_italic"', "monospace"],
+        gilroy_bold: ['"gilroy_bold"', "sans-serif"],
+        gilroy: ['"gilroy"', "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+
 export default config;

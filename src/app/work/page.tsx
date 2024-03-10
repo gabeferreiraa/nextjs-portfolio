@@ -1,7 +1,7 @@
 import React from "react";
 
-const page = () => {
-  return <div></div>;
+const WorkPage = () => {
+  return <div>Work</div>;
 };
 
-export default page;
+export default WorkPage;
