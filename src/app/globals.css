@@ -3,17 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "azeret_mono";
-  src: url("/public/fonts/AzeretMono-VariableFont_wght.ttf") format("truetype");
-}
-@font-face {
-  font-family: "azeret_mono_italic";
-  src: url("/public/fonts/AzeretMono-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-style: italic;
-}
-
-@font-face {
   font-family: "gilroy_bold";
   src: url("/public/fonts/Gilroy-ExtraBold.otf") format("opentype");
 }
@@ -24,9 +13,13 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --navy: #14213d;
+  --crimson: #dc143c;
+  --yellow: #fca311;
+  --gray: #e5e5e5;
+  --white: #fff;
+  --black: #181818;
+  --clear: #00000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,6 +35,45 @@ body {
   cursor: none;
   background-color: #181818;
 }
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+h5 {
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+}
+
 .cursor-dot {
   width: 13px;
   height: 13px;
@@ -66,7 +98,7 @@ body {
   pointer-events: none;
 }
 
-.link-styles {
+/* .link-styles {
   .heading1-menu-item {
     font-size: var(--fs-900);
     color: var(--yellow);
@@ -91,4 +123,4 @@ body {
       }
     }
   }
-}
+} */

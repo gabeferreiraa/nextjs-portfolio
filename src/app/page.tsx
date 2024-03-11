@@ -1,113 +1,107 @@
-import Image from "next/image";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import { Button } from "@mui/base"; // Ensure correct import for MUI Button
 
-export default function Home() {
+const Home: React.FC = () => {
+  const letters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%&?'";
+  const [spanTexts, setSpanTexts] = useState<string[]>([
+    "Welcome",
+    "To",
+    "Gabriel",
+    "Ferreiras",
+    "Page",
+  ]);
+
+  // Ref for the spans to attach onmouseover dynamically
+  const spansRef = useRef<(HTMLSpanElement | null)[]>([]);
+
+  const stylizedTexts = ["Welc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
+  useEffect(() => {
+    const onMouseOver = (idx: number) => {
+      let iteration = 0;
+      let interval: number;
+
+      const updateText = () => {
+        const newText = stylizedTexts[idx]
+          .split("")
+          .map((_, index) => {
+            if (index < iteration) {
+              return stylizedTexts[idx][index];
+            }
+            return letters[Math.floor(Math.random() * letters.length)];
+          })
+          .join("");
+
+        setSpanTexts((currentTexts) =>
+          currentTexts.map((text, mapIdx) => (mapIdx === idx ? newText : text))
+        );
+
+        iteration += 1 / 3;
+        if (iteration >= stylizedTexts[idx].length) {
+          clearInterval(interval);
+        }
+      };
+
+      interval = window.setInterval(updateText, 30);
+
+      return () => clearInterval(interval);
+    };
+
+    spansRef.current.forEach((span, idx) => {
+      if (!span) return;
+      span.onmouseover = () => onMouseOver(idx);
+    });
+  }, [stylizedTexts, letters]);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <section className="h-screen w-full relative grid grid-cols-1 sm:grid-cols-2">
+        <div className="ml-10 mt-24 w-fit sm:ml-24 flex flex-col justify-center text-left gap-12 col-span-1">
+          {spanTexts.map((text, idx) => (
+            <span
+              key={idx}
+              ref={(el) => (spansRef.current[idx] = el)}
+              className="text-5xl w-fit italic uppercase font-azeret_mono text-yellow tracking-[.4rem]"
+              data-value={text}
+            >
+              {text}
+            </span>
+          ))}
+        </div>
+        <div className=" sm:translate-y-28 flex flex-col justify-center gap-6 sm:gap-14 max-w-[900px] ml-10 sm:ml-0 ">
+          <div className=" text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-extralight">
+            Designer- Noun
+          </div>
+          <div className=" text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono">
+            Plural- Noun: De$igners
+          </div>
+          <div className=" text-lg uppercase  text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono">
+            Definitions:
+          </div>
+          <div className=" text-lg uppercase max-w-[400px] text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono">
+            1.a person who plans the form, look, or workings of something before
+            its being made or built, typically by drawing it in detail.
+          </div>
+          <div className=" text-lg uppercase text-crimson tracking-wider sm:tracking-[.25rem] font-azeret_mono">
+            {"{"} Gabriel Ferreira {"}"}
+          </div>
+        </div>
+      </section>
+      <div className="h-52 sm:h-48 w-full bg-white flex justify-center items-start flex-col">
+        <div className="self-center w-3/4">
+          <div className="leading-6 text-lg sm:leading-[1.7] sm:text-2xl font-light font-gilroy tracking-widest mb-4">
+            Hello! I'm a User Experience and Interaction Designer based in
+            Philadelphia, PA. I focus on full-stack development and
+            accessibility design.
+          </div>
+          <Button className="bg-clear w-fit font-azeret_mono text-sm font-thin sm:font-medium text-navy px-6 py-1 border-2 border-solid border-navy hover:bg-navy hover:text-white">
+            <a href="/contact">Reach Out</a>
+          </Button>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
-}
+};
+
+export default Home;

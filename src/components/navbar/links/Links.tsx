@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import "@/app/globals.css";
+import { AnimatePresence, animate, motion } from "framer-motion";
 
 const Links = () => {
   const links = [
     {
       title: "Home",
-      path: "/home",
+      path: "/",
     },
     {
       title: "Work",
@@ -19,7 +20,7 @@ const Links = () => {
   ];
 
   return (
-    <div className=" flex flex-col text-6xl font-medium font-azeret_mono sm:text-5xl text-yellow z-50 ">
+    <div className="flex flex-col text-5xl text-center font-medium font-azeret_mono sm:text-left md:text-6xl text-yellow z-50 ">
       {links.map((link) => (
         <Link
           href={link.path}
