@@ -70,7 +70,7 @@ const Home: React.FC = () => {
           ))}
         </div>
         <div className=" sm:translate-y-28 flex flex-col justify-center gap-6 sm:gap-14 max-w-[900px] ml-10 sm:ml-0 ">
-          <div className=" text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-extralight">
+          <div className=" text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-light">
             Designer- Noun
           </div>
           <div className=" text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono">
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
       <div className="h-52 sm:h-48 w-full bg-white flex justify-center items-start flex-col">
         <div className="self-center w-3/4">
           <div className="leading-6 text-lg sm:leading-[1.7] sm:text-2xl font-light font-gilroy tracking-widest mb-4">
-            Hello! I'm a User Experience and Interaction Designer based in
+            Hello! Im a User Experience and Interaction Designer based in
             Philadelphia, PA. I focus on full-stack development and
             accessibility design.
           </div>
