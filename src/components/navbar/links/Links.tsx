@@ -20,12 +20,12 @@ const Links = () => {
   ];
 
   return (
-    <div className="flex flex-col text-5xl text-center font-medium font-azeret_mono sm:text-left md:text-6xl text-yellow z-50 ">
+    <div className="flex flex-col gap-12 z-50 ">
       {links.map((link) => (
         <Link
           href={link.path}
           key={link.title}
-          className="leading-loose mb-6 tracking-[.5rem] hover:tracking-[.65em] transition-all duration-200"
+          className=" font-azeret_mono text-center sm:text-left text-5xl md:text-6xl text-yellow font-normal mb-6 tracking-[.5rem] hover:tracking-[1.6rem] transition-all duration-200"
         >
           {link.title}
         </Link>

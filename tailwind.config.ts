@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         azeret_mono: [
-          "Azeret_Mono",
+          "var(--font-azeret_mono)",
           "ui-monospace",
           "SFMono-Regular",
           "Menlo",
@@ -44,7 +44,7 @@ const config: Config = {
           "sans-serif",
         ],
         gilroy: [
-          "gilroy",
+          "var(--font-gilroy-light)",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",

@@ -40,7 +40,7 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 pt-4 w-full flex h-20 items-center justify-between px-12 sm:px-32 z-50 bg-clear">
         <div></div>
         <div
-          className="w-14 h-12 flex items-center justify-center cursor-pointer z-50"
+          className="w-14 h-12 flex items-center justify-center cursor-none z-50"
           onClick={toggleMenu}
         >
           <Hamburger
@@ -63,7 +63,7 @@ const Navbar = () => {
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
-            className="bg-navy fixed left-0 top-0 bottom-0 right-0 w-full h-full z-40 flex justify-center items-center origin-top "
+            className="bg-black fixed left-0 top-0 bottom-0 right-0 w-full h-full z-40 flex justify-center items-center origin-top "
           >
             <div className="flex flex-col w-4/6 justify-center items-center sm:flex-row sm:ml-0">
               <div onClick={toggleMenu} className="flex sm:w-1/2  ">
@@ -80,7 +80,7 @@ const Navbar = () => {
                     Use my contact below, send me some ideas & lets get to work
                   </p>
                 </div>
-                <div className=" font-azeret_mono italic text-s text-yellow mb-4 mt-3">
+                <div className=" font-azeret_mono italic text-s text-yellow mb-4 tracking-wider ">
                   <a href="mailto:gferreira0404@gmail.com">
                     gferreira0404@gmail.com
                   </a>

@@ -12,6 +12,13 @@
   src: url("/public/fonts/Gilroy-Light.otf") format("opentype");
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --navy: #14213d;
   --crimson: #dc143c;
