@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@mui/base"; // Ensure correct import for MUI Button
 const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
+import Link from "next/link";
 
 const Home: React.FC = () => {
   const letters =
@@ -96,7 +97,7 @@ const Home: React.FC = () => {
             accessibility design.
           </div>
           <Button className="bg-clear w-fit font-azeret_mono text-sm sm:font-medium text-navy px-6 py-1 border-2 border-solid border-navy hover:bg-navy hover:text-white">
-            <a href="/contact">Reach Out</a>
+            <Link href="/contact">Reach Out</Link>
           </Button>
         </div>
       </div>
