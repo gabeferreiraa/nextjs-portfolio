@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: (theme) => ({
+        "white-folder": "url('/public/icons/folder-white.svg')",
+      }),
       fontFamily: {
         azeret_mono: [
           "var(--font-azeret_mono)",

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@mui/base"; // Ensure correct import for MUI Button
+const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
 
 const Home: React.FC = () => {
   const letters =
@@ -16,7 +17,6 @@ const Home: React.FC = () => {
   // Ref for the spans to attach onmouseover dynamically
   const spansRef = useRef<(HTMLSpanElement | null)[]>([]);
 
-  const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
   useEffect(() => {
     const onMouseOver = (idx: number) => {
       let iteration = 0;
