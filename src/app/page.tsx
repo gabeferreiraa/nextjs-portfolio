@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     "Welcome",
     "To",
     "Gabriel",
-    "Ferreiras",
+    "Ferreira's",
     "Page",
   ]);
 
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
       if (!span) return;
       span.onmouseover = () => onMouseOver(idx);
     });
-  }, [stylizedTexts, letters]);
+  }, [letters]);
 
   return (
     <>
