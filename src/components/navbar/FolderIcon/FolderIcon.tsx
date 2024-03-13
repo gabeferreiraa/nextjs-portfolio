@@ -1,6 +1,6 @@
 import React from "react";
 
-const FolderIcon = ({ color }) => {
+const FolderIcon = ({ color }: { color: string }) => {
   return (
     <svg
       fill={color}
