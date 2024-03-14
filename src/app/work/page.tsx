@@ -2,6 +2,7 @@
 import React from "react";
 // Default theme
 import "@splidejs/react-splide/css";
+import Link from "next/link";
 
 // or other themes
 import "@splidejs/react-splide/css/skyblue";
@@ -57,14 +58,14 @@ const WorkPage = () => {
         </div>
       </section>
       <section className="bg-black w-full block">
-        <div className="my-16 mx-auto ">
+        <div className="my-12 mx-auto ">
           <Splide
             options={options}
             aria-labelledby="Figma Wireframes"
             hasTrack={false}
           >
             <h2 className="text-yellow font-azeret_mono text-4xl tracking-wide uppercase mx-auto my-4 w-3/4">
-              Clock App
+              Portfolio
             </h2>
             <SplideTrack className="cursor-grab">
               {generateSlides().map((slide) => (
@@ -75,19 +76,24 @@ const WorkPage = () => {
             </SplideTrack>
 
             <div className="flex flex-col font-bold justify-between mx-auto w-3/4 mt-8 sm:mt-0 sm:flex-row sm:font-normal ">
-              <div className="flex flex-col text-white font-gilroy leading-7 tracking-wide uppercase text-2xl sm:text-base sm:font-thin">
+              <div className="flex flex-col text-white font-gilroy leading-5 tracking-wide uppercase text-2xl sm:text-sm sm:font-thin">
                 <p>
                   <span className="font-bold text-yellow">Type </span>
-                  Branding, Q.O.L.
+                  Branding, Custom
                 </p>
                 <p>
                   <span className="font-bold text-yellow">Tools </span>
-                  Figma, After Effects
+                  React, Nextjs, Figma
                 </p>
                 <p>
                   <span className="font-bold text-yellow">Year </span>
-                  2023
+                  2024
                 </p>
+                <span className="font-bold text-yellow underline mt-4 hover:text-white">
+                  <Link href="https://portfolio-psi-virid-27.vercel.app">
+                    Live link
+                  </Link>
+                </span>
               </div>
               <div className="mt-8 sm:mt-0 max-w-[700px]">
                 <p className="text-white font-gilroy font-bold tracking-wide text-3xl leading-9 sm:text-base sm:leading-7 ">
@@ -120,19 +126,22 @@ const WorkPage = () => {
             </SplideTrack>
 
             <div className="flex flex-col font-bold justify-between mx-auto w-3/4 mt-8 sm:mt-0 sm:flex-row sm:font-normal ">
-              <div className="flex flex-col text-white font-gilroy leading-7 tracking-wide uppercase text-2xl sm:text-base sm:font-thin">
+              <div className="flex flex-col text-white font-gilroy leading-6 tracking-wide uppercase text-2xl sm:text-sm sm:font-thin">
                 <p>
                   <span className="font-bold text-yellow">Type </span>
-                  Branding, Q.O.L.
+                  Interactive, Assignment
                 </p>
                 <p>
                   <span className="font-bold text-yellow">Tools </span>
-                  Figma, After Effects
+                  HTML, CSS, JS, Tailwind
                 </p>
                 <p>
                   <span className="font-bold text-yellow">Year </span>
-                  2023
+                  2024
                 </p>
+                <span className="font-bold text-yellow underline mt-4 hover:text-white">
+                  <Link href="https://idm231-gf379.vercel.app/">Live link</Link>
+                </span>
               </div>
               <div className="mt-8 sm:mt-0 max-w-[700px]">
                 <p className="text-white font-gilroy font-bold tracking-wide text-3xl leading-9 sm:text-base sm:leading-7 ">

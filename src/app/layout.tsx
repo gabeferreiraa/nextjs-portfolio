@@ -29,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${azaretMono.variable} ${gilroy.variable}`}>
+      <body
+        className={`${azaretMono.variable} ${gilroy.variable} max-w-[1500px]`}
+      >
         <CustomCursor />
         <Navbar />
         {children}
