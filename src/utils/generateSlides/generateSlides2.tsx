@@ -7,13 +7,14 @@
  *
  * @return An array with objects for sample images.
  */
-export function generateSlides(
+export function generateSlides2(
   length = 10,
   sig = 0,
   customImages = [
-    "https://res.cloudinary.com/dsuhgv4an/image/upload/v1710785240/portfolio-wireframes_g51zlw.jpg",
-    "https://res.cloudinary.com/dsuhgv4an/image/upload/v1710785806/portfolio-menu-wireframe_yzmz0a.jpg",
-    "https://res.cloudinary.com/dsuhgv4an/image/upload/v1710786097/portfolio-wireframe-contact_guydpo.jpg",
+    "https://res.cloudinary.com/dsuhgv4an/image/upload/v1710787384/portfolio-clock-1_xqippr.jpg",
+    "https://res.cloudinary.com/dsuhgv4an/image/upload/v1710787381/portfolio-clock-2_gsw5kt.jpg",
+    "https://res.cloudinary.com/dsuhgv4an/image/upload/v1710787379/portfolio-clock-3_ppybgx.jpg",
+    "https://res.cloudinary.com/dsuhgv4an/image/upload/v1710787377/portfolio-clock-4_f7kbef.jpg",
   ]
 ): Array<{ src: string; alt: string }> {
   // If custom images are provided, use them instead of generating random Unsplash URLs

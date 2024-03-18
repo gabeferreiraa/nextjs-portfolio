@@ -4,22 +4,18 @@ import React from "react";
 import "@splidejs/react-splide/css";
 import Link from "next/link";
 
-// or other themes
-import "@splidejs/react-splide/css/skyblue";
-import "@splidejs/react-splide/css/sea-green";
-
 // or only core styles
 import "@splidejs/react-splide/css/core";
-import Image from "next/image";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { generateSlides } from "@/utils";
+import { generateSlides2 } from "@/utils/generateSlides/generateSlides2";
 
 const WorkPage = () => {
   const options = {
     type: "loop",
     padding: { left: "20rem", right: "20rem" },
-    gap: "1rem",
-    height: "28rem",
+    gap: "2rem",
+    height: "26rem",
     autoplay: true,
     pauseOnHover: true,
     pagination: false,
@@ -65,7 +61,7 @@ const WorkPage = () => {
             hasTrack={false}
           >
             <h2 className="text-yellow font-azeret_mono text-4xl tracking-wide uppercase mx-auto my-4 w-3/4">
-              Portfolio
+              Custom Portfolio
             </h2>
             <SplideTrack className="cursor-grab">
               {generateSlides().map((slide) => (
@@ -89,6 +85,11 @@ const WorkPage = () => {
                   <span className="font-bold text-yellow">Year </span>
                   2024
                 </p>
+                <span className="font-bold text-white mt-1 hover:text-crimson">
+                  <Link href="https://github.com/gabeferreiraa/nextjs-portfolio">
+                    Repo link
+                  </Link>
+                </span>
                 <span className="font-bold text-yellow underline mt-4 hover:text-white">
                   <Link href="https://portfolio-psi-virid-27.vercel.app">
                     Live link
@@ -97,12 +98,14 @@ const WorkPage = () => {
               </div>
               <div className="mt-8 sm:mt-0 max-w-[700px]">
                 <p className="text-white font-gilroy font-bold tracking-wide text-3xl leading-9 sm:text-base sm:leading-7 ">
-                  Our proposal for the Apple Clock app introduces a new grouping
-                  feature, resolving the issue of inefficient alarm
-                  organization. Users can now easily create, label, and manage
-                  alarm groups, improving productivity and organization. This
-                  update streamlines time management, providing a personalized
-                  and efficient experience for users
+                  Welcome to my bespoke website, meticulously crafted with the
+                  latest web development techniques. From wireframe design using
+                  Figma to thorough accessibility testing, every step is
+                  optimized for excellence. With Tailwind CSS for responsive
+                  styling, the site ensures seamless user experience across
+                  devices. Leveraging the power of Vercel and Next.js,
+                  deployment is swift and scalable. Explore the epitome of
+                  modern web development standards.
                 </p>
               </div>
             </div>
@@ -118,7 +121,7 @@ const WorkPage = () => {
               Clock App
             </h2>
             <SplideTrack className="cursor-grab">
-              {generateSlides().map((slide) => (
+              {generateSlides2().map((slide) => (
                 <SplideSlide key={slide.src}>
                   <img src={slide.src} alt={slide.alt} />
                 </SplideSlide>
@@ -140,7 +143,9 @@ const WorkPage = () => {
                   2024
                 </p>
                 <span className="font-bold text-yellow underline mt-4 hover:text-white">
-                  <Link href="https://idm231-gf379.vercel.app/">Live link</Link>
+                  <Link href="https://www.figma.com/file/uKxfFHSEtypXptaszp0ddI/IDM-213-Template?type=design&node-id=4%3A491&mode=design&t=KnPQnyuhzNGHUd9B-1">
+                    Figma link
+                  </Link>
                 </span>
               </div>
               <div className="mt-8 sm:mt-0 max-w-[700px]">
