@@ -155,7 +155,7 @@ const WorkPage = () => {
                   organization. Users can now easily create, label, and manage
                   alarm groups, improving productivity and organization. This
                   update streamlines time management, providing a personalized
-                  and efficient experience for users
+                  and efficient experience for users.
                 </p>
               </div>
             </div>
