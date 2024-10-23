@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { Button } from "@mui/base"; // Ensure correct import for MUI Button
-const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
+import { Button } from "@mui/base";
 import Link from "next/link";
+
+const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
 
 const Home: React.FC = () => {
   const letters =
@@ -57,46 +58,46 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <section className="h-screen w-full relative grid grid-cols-1 sm:grid-cols-2">
-        <div className="ml-10 mt-24 w-fit sm:mt-0 sm:ml-24 flex flex-col justify-center text-left gap-6 sm:gap-12 col-span-1">
+      <section className="min-h-screen w-full relative grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="ml-6 mt-16 w-full sm:ml-24 flex flex-col justify-center text-left gap-6 sm:gap-12 col-span-1">
           {spanTexts.map((text, idx) => (
             <span
               key={idx}
               ref={(el) => (spansRef.current[idx] = el)}
-              className="text-5xl w-fit italic uppercase font-azeret_mono text-yellow tracking-[.4rem]"
+              className="text-4xl sm:text-5xl w-fit italic uppercase font-azeret_mono text-yellow tracking-[.3rem] sm:tracking-[.4rem]"
               data-value={text}
             >
               {text}
             </span>
           ))}
         </div>
-        <div className=" max-h-4/5 mt-8 sm:translate-y-28 flex flex-col justify-center gap-6 sm:gap-14 max-w-[900px] ml-10 sm:ml-0 sm:mt-0 mb-8">
-          <div className=" text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
+        <div className="sm:translate-y-28 flex flex-col justify-center gap-6 sm:gap-14 max-w-full px-6 sm:px-0 sm:max-w-[900px] mb-8">
+          <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
             Designer- Noun
           </div>
-          <div className=" text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
+          <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
             Plural- Noun: De$igners
           </div>
-          <div className=" text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
+          <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
             Definitions:
           </div>
-          <div className=" text-lg uppercase max-w-[400px] text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
+          <div className="text-base sm:text-lg uppercase max-w-full sm:max-w-[400px] text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
             1.a person who plans the form, look, or workings of something before
             its being made or built, typically by drawing it in detail.
           </div>
-          <div className=" text-lg uppercase text-crimson tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin hover:text-yellow">
+          <div className="text-base sm:text-lg uppercase text-crimson tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin hover:text-yellow">
             {"{"} Gabriel Ferreira {"}"}
           </div>
         </div>
       </section>
-      <div className="h-52 sm:h-48 w-full bg-white flex justify-center items-start flex-col">
-        <div className="self-center w-3/4">
+      <div className="h-auto sm:h-48 w-full bg-white flex justify-center items-start flex-col py-8 sm:py-0">
+        <div className="self-center w-11/12 sm:w-3/4">
           <div className="leading-6 sm:leading-[1.7] sm:text-2xl font-extrabold font-gilroy tracking-widest mb-4">
-            Hello! Im a User Experience and Interaction Designer based in
+            Hello! I'm a User Experience and Interaction Designer based in
             Philadelphia, PA. I focus on full-stack development and
             accessibility design.
           </div>
-          <Button className="bg-clear w-fit font-azeret_mono text-sm sm:font-medium text-navy px-6 py-1 border-2 border-solid border-navy hover:bg-navy hover:text-white">
+          <Button className="bg-clear w-fit font-azeret_mono text-sm sm:font-medium text-navy px-6 py-2 sm:py-1 border-2 border-solid border-navy hover:bg-navy hover:text-white">
             <Link href="/contact">Reach Out</Link>
           </Button>
         </div>

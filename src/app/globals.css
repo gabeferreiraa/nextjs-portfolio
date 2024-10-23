@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .splide__slide {
+    @apply transition-transform duration-300;
+  }
+  .splide__slide.is-active {
+    @apply transform scale-110; /* Use scale-110 for 110% size */
+  }
+}
+
 @font-face {
   font-family: "gilroy_bold";
   src: url("/public/fonts/Gilroy-ExtraBold.otf") format("opentype");
