@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@mui/base";
 import Link from "next/link";
 
-const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@&a's", "P@GE"];
+const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
 
 const Home: React.FC = () => {
   const letters =
