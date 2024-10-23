@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@mui/base";
 import Link from "next/link";
 
-const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
+const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@&apos;s", "P@GE"];
 
 const Home: React.FC = () => {
   const letters =
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
       if (!span) return;
       span.onmouseover = () => onMouseOver(idx);
     });
-  }, [letters]);
+  }, [letters, stylizedTexts, spansRef]);
 
   return (
     <>
@@ -86,14 +86,14 @@ const Home: React.FC = () => {
             its being made or built, typically by drawing it in detail.
           </div>
           <div className="text-base sm:text-lg uppercase text-crimson tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin hover:text-yellow">
-            {"{"} Gabriel Ferreira {"}"}
+            {"{ Gabriel Ferreira }"}
           </div>
         </div>
       </section>
       <div className="h-auto sm:h-48 w-full bg-white flex justify-center items-start flex-col py-8 sm:py-0">
         <div className="self-center w-11/12 sm:w-3/4">
           <div className="leading-6 sm:leading-[1.7] sm:text-2xl font-extrabold font-gilroy tracking-widest mb-4">
-            Hello! I'm a User Experience and Interaction Designer based in
+            Hello! I&apos;m a User Experience and Interaction Designer based in
             Philadelphia, PA. I focus on full-stack development and
             accessibility design.
           </div>
