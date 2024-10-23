@@ -49,7 +49,7 @@ const ContactPage = () => {
           </Link>
           <span>GitHub</span>
         </div>
-        <div className="sm:absolute sm:inset-y-1/2 sm:inset-x-1/2 flex flex-col items-center space-y-2">
+        <div className="sm:absolute sm:inset-y-1/2 sm:inset-x-3/4 flex flex-col items-center space-y-2">
           <Link href="https://www.linkedin.com/in/gabriel-ferreira-544b95251/">
             <FolderIcon color={"white"} />
           </Link>

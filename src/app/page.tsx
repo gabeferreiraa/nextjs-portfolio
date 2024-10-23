@@ -54,12 +54,12 @@ const Home: React.FC = () => {
       if (!span) return;
       span.onmouseover = () => onMouseOver(idx);
     });
-  }, [letters, stylizedTexts, spansRef]);
+  }, [letters, stylizedTexts]);
 
   return (
     <>
-      <section className="min-h-screen w-full relative grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <div className="ml-6 mt-16 w-full sm:ml-24 flex flex-col justify-center text-left gap-6 sm:gap-12 col-span-1">
+      <section className="min-h-screen w-full relative grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="ml-6 mt-16 w-full md:ml-24 flex flex-col justify-center text-left gap-6 md:gap-12 col-span-1">
           {spanTexts.map((text, idx) => (
             <span
               key={idx}
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
             </span>
           ))}
         </div>
-        <div className="sm:translate-y-28 flex flex-col justify-center gap-6 sm:gap-14 max-w-full px-6 sm:px-0 sm:max-w-[900px] mb-8">
+        <div className="md:translate-y-28 flex flex-col justify-center gap-6 md:gap-14 max-w-full px-6 md:px-0 md:max-w-[900px] mb-8">
           <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
             Developer- Noun
           </div>
