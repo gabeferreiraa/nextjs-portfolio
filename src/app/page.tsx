@@ -73,20 +73,20 @@ const Home: React.FC = () => {
         </div>
         <div className="sm:translate-y-28 flex flex-col justify-center gap-6 sm:gap-14 max-w-full px-6 sm:px-0 sm:max-w-[900px] mb-8">
           <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
-            Designer- Noun
+            Developer- Noun
           </div>
           <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
-            Plural- Noun: De$igners
+            Plural- Noun: D3vel0per$
           </div>
           <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
             Definitions:
           </div>
           <div className="text-base sm:text-lg uppercase max-w-full sm:max-w-[400px] text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
-            1.a person who plans the form, look, or workings of something before
-            its being made or built, typically by drawing it in detail.
+            1. An architect of the digital realm, building bridges between ideas
+            and execution through the art of coding.
           </div>
           <div className="text-base sm:text-lg uppercase text-crimson tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin hover:text-yellow">
-            {"{ Gabriel Ferreira }"}
+            2. {"{ Gabriel Ferreira }"}
           </div>
         </div>
       </section>
