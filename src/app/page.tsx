@@ -12,7 +12,7 @@ const Home: React.FC = () => {
     "Welcome",
     "To",
     "Gabriel",
-    "Ferreira's",
+    "Ferreiras",
     "Page",
   ]);
 
