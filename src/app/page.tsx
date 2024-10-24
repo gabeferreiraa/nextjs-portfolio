@@ -73,7 +73,7 @@ const Home: React.FC = () => {
         </div>
         <div className="md:translate-y-28 flex flex-col justify-center gap-6 md:gap-14 max-w-full px-6 md:px-0 md:max-w-[900px] mb-8">
           <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
-            Developer- Noun
+            Developer- Noun - test
           </div>
           <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
             Plural- Noun: D3vel0per$
