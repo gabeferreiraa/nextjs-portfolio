@@ -72,7 +72,7 @@ const WorkPage = () => {
             <SplideTrack className="cursor-grab">
               {generateSlides2().map((slide) => (
                 <SplideSlide key={slide.src}>
-                  <img src={slide.src} alt={slide.alt} />
+                  {/* <img src={slide.src} alt={slide.alt} /> */}
                 </SplideSlide>
               ))}
             </SplideTrack>
@@ -92,9 +92,7 @@ const WorkPage = () => {
                   2024
                 </p>
                 <span className="font-bold text-yellow underline mt-4 hover:text-white">
-                  <Link href="https://www.figma.com/file/uKxfFHSEtypXptaszp0ddI/IDM-213-Template?type=design&node-id=4%3A491&mode=design&t=KnPQnyuhzNGHUd9B-1">
-                    link
-                  </Link>
+                  <Link href="">link</Link>
                 </span>
               </div>
               <div className="mt-8 sm:mt-0 max-w-[700px]">
@@ -126,7 +124,7 @@ const WorkPage = () => {
             <SplideTrack className="cursor-grab">
               {generateSlides().map((slide) => (
                 <SplideSlide key={slide.src}>
-                  <img src={slide.src} alt={slide.alt} />
+                  {/* <img src={slide.src} alt={slide.alt} /> */}
                 </SplideSlide>
               ))}
             </SplideTrack>
