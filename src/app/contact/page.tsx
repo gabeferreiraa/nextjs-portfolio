@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import "@/app/globals.css";
 import FolderIcon from "@/components/navbar/FolderIcon/FolderIcon";
+import SpinnerAnimation from "@/components/navbar/SpinnerAnimation/SpinnerAnimation";
 
 const ContactPage = () => {
   const links = [
@@ -43,11 +44,17 @@ const ContactPage = () => {
           </Link>
           <span>Email</span>
         </div>
+        <div className=" absolute left-20 ">
+          <SpinnerAnimation offset={0.1} />
+        </div>
         <div className="sm:absolute sm:top-20 sm:right-24 flex flex-col items-center space-y-2">
           <Link href="https://github.com/gabeferreiraa">
             <FolderIcon color={"white"} />
           </Link>
           <span>GitHub</span>
+        </div>
+        <div className=" absolute right-60 top-20 ">
+          <SpinnerAnimation offset={0.05} />
         </div>
         <div className="sm:absolute sm:inset-y-1/2 sm:inset-x-3/4 flex flex-col items-center space-y-2">
           <Link href="https://www.linkedin.com/in/gabriel-ferreira-544b95251/">

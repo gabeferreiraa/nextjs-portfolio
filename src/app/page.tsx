@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@mui/base";
 import Link from "next/link";
-
+import SpinnerAnimation from "@/components/navbar/SpinnerAnimation/SpinnerAnimation";
 const stylizedTexts = ["W3lc0me", "t0", "G@br!el", "Fe&reir@'s", "P@GE"];
 
 const Home: React.FC = () => {
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
       if (!span) return;
       span.onmouseover = () => onMouseOver(idx);
     });
-  }, [letters, stylizedTexts]);
+  }, [letters]);
 
   return (
     <>
@@ -63,7 +63,9 @@ const Home: React.FC = () => {
           {spanTexts.map((text, idx) => (
             <span
               key={idx}
-              ref={(el) => (spansRef.current[idx] = el)}
+              ref={(el) => {
+                spansRef.current[idx] = el;
+              }}
               className="text-4xl sm:text-5xl w-fit italic uppercase font-azeret_mono text-yellow tracking-[.3rem] sm:tracking-[.4rem]"
               data-value={text}
             >
@@ -71,9 +73,10 @@ const Home: React.FC = () => {
             </span>
           ))}
         </div>
+
         <div className="md:translate-y-28 flex flex-col justify-center gap-6 md:gap-14 max-w-full px-6 md:px-0 md:max-w-[900px] mb-8">
           <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
-            Developer- Noun - test
+            Developer- Noun
           </div>
           <div className="text-base sm:text-lg uppercase text-white tracking-wider sm:tracking-[.25rem] font-azeret_mono font-thin">
             Plural- Noun: D3vel0per$

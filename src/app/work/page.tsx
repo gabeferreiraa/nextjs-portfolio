@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 // Default theme
+import SpinnerAnimation from "@/components/navbar/SpinnerAnimation/SpinnerAnimation";
 import "@splidejs/react-splide/css";
 import Link from "next/link";
 
@@ -53,6 +54,9 @@ const WorkPage = () => {
             @H3aD
           </div>
         </div>
+        <div className=" absolute left-20 ">
+          <SpinnerAnimation offset={0.1} />
+        </div>
       </section>
       <section className="bg-black w-full block">
         <div className="my-12 mx-auto ">
@@ -64,6 +68,7 @@ const WorkPage = () => {
             <h2 className="text-yellow font-azeret_mono text-4xl tracking-wide uppercase mx-auto my-4 w-3/4">
               Impact Six, LLC
             </h2>
+
             <SplideTrack className="cursor-grab">
               {generateSlides2().map((slide) => (
                 <SplideSlide key={slide.src}>
@@ -76,11 +81,11 @@ const WorkPage = () => {
               <div className="flex flex-col text-white font-gilroy leading-6 tracking-wide uppercase text-2xl sm:text-sm sm:font-thin">
                 <p>
                   <span className="font-bold text-yellow">Type </span>
-                  Interactive, Assignment
+                  Interactive, Business
                 </p>
                 <p>
                   <span className="font-bold text-yellow">Tools </span>
-                  HTML, CSS, JS, Tailwind
+                  TSX, PHP, Storybook, mySQL
                 </p>
                 <p>
                   <span className="font-bold text-yellow">Year </span>
@@ -88,18 +93,22 @@ const WorkPage = () => {
                 </p>
                 <span className="font-bold text-yellow underline mt-4 hover:text-white">
                   <Link href="https://www.figma.com/file/uKxfFHSEtypXptaszp0ddI/IDM-213-Template?type=design&node-id=4%3A491&mode=design&t=KnPQnyuhzNGHUd9B-1">
-                    Figma link
+                    link
                   </Link>
                 </span>
               </div>
               <div className="mt-8 sm:mt-0 max-w-[700px]">
                 <p className="text-white font-gilroy font-bold tracking-wide text-3xl leading-9 sm:text-base sm:leading-7 ">
-                  Our proposal for the Apple Clock app introduces a new grouping
-                  feature, resolving the issue of inefficient alarm
-                  organization. Users can now easily create, label, and manage
-                  alarm groups, improving productivity and organization. This
-                  update streamlines time management, providing a personalized
-                  and efficient experience for users.
+                  At Impact Six, LLC, I developed reusable UI components with
+                  React and Storybook, focusing on accessibility and consistent
+                  design. Using TypeScript, I integrated front-end components
+                  with Laravel and Next.js APIs, significantly improving data
+                  flow and application performance. I also optimized state
+                  management to support scalable features, contributing to a
+                  smoother user experience. Through Git, I managed pull
+                  requests, branch workflows, and tackled merge conflicts to
+                  keep projects stable and organized, while ensuring high code
+                  quality through regular reviews.
                 </p>
               </div>
             </div>
@@ -123,14 +132,14 @@ const WorkPage = () => {
             </SplideTrack>
 
             <div className="flex flex-col font-bold justify-between mx-auto w-3/4 mt-8 sm:mt-0 sm:flex-row sm:font-normal ">
-              <div className="flex flex-col text-white font-gilroy leading-5 tracking-wide uppercase text-2xl sm:text-sm sm:font-thin">
+              <div className="flex flex-col text-white font-gilroy leading-5 tracking-wide uppercase text-2xl sm:text-sm sm:font-thin max-w-80">
                 <p>
                   <span className="font-bold text-yellow">Type </span>
-                  Branding, Custom
+                  Internship, Branding
                 </p>
                 <p>
-                  <span className="font-bold text-yellow">Tools </span>
-                  React, Nextjs, Figma
+                  <span className="font-bold text-yellow ">Tools </span>
+                  React, Nextjs, Web components, PostgreSQL, Node, Express
                 </p>
                 <p>
                   <span className="font-bold text-yellow">Year </span>
@@ -149,14 +158,17 @@ const WorkPage = () => {
               </div>
               <div className="mt-8 sm:mt-0 max-w-[700px]">
                 <p className="text-white font-gilroy font-bold tracking-wide text-3xl leading-9 sm:text-base sm:leading-7 ">
-                  Welcome to my bespoke website, meticulously crafted with the
-                  latest web development techniques. From wireframe design using
-                  Figma to thorough accessibility testing, every step is
-                  optimized for excellence. With Tailwind CSS for responsive
-                  styling, the site ensures seamless user experience across
-                  devices. Leveraging the power of Vercel and Next.js,
-                  deployment is swift and scalable. Explore the epitome of
-                  modern web development standards.
+                  At Hermae Inc., I developed a Slack integration for the Hermae
+                  API, bringing AI guidance directly into Slack for seamless
+                  team access. I created a frontend for an internal sales tool
+                  and built a dashboard to manage company data using React and
+                  Next.js, both powered by an Express backend. I also designed a
+                  REST API with Node, Express, and PostgreSQL to handle data and
+                  support these tools, writing migration scripts to keep the
+                  database updated with evolving requirements. Additionally, I
+                  developed a Web Component library with Lit, standardizing
+                  frontend development across multiple applications and
+                  integrations.
                 </p>
               </div>
             </div>
