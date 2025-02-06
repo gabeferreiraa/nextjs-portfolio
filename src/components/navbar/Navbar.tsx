@@ -1,7 +1,7 @@
 "use client";
 import { Squash as Hamburger } from "hamburger-react";
 import React, { useState } from "react";
-import Links from "./links/Links";
+import Links from "./Links/Links";
 import { Button } from "@mui/base";
 import { AnimatePresence, animate, motion } from "framer-motion";
 

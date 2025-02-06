@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CustomCursor from "@/components/navbar/custom-cursor/Cursor";
+import CustomCursor from "@/components/navbar/CustomCursor/Cursor";
 import { Azeret_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
